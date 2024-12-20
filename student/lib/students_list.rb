@@ -56,7 +56,7 @@ class StudentsList
   end
 
   def add_student(student)
-    if self.students.any? { |existing_student| existing_student.unique_student?(student) }
+    if self.students.any? { |existing_student| existing_student == student }
       raise ArgumentError, "Такой студент уже существует в списке"
     end
 
@@ -79,7 +79,7 @@ class StudentsList
     index = self.students.find_index { |student| student.id == id }
     raise IndexError, 'Студента с таким id нет' unless index
 
-    if self.students.any? { |existing_student| existing_student.unique_student?(new_student) && existing_student.id != id }
+    if self.students.any? { |existing_student| existing_student == new_student && existing_student.id != id }
       raise ArgumentError, "Замена невозможна: студент с такими же данными уже существует"
     end
 

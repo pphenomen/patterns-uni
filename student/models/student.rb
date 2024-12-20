@@ -116,7 +116,7 @@ class Student < Person
     	birthdate <=> other.birthdate
   	end
 
-  	def unique_student?(other)
+  	def ==(other)
   		return false unless other.is_a?(Student)
   		
   		(self.email && self.email == other.email) || 

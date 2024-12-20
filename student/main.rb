@@ -16,29 +16,29 @@ require_relative './adapter/students_list_db_adapter'
 require 'json'
 require 'yaml'
 
-# student1 = Student.new(
-#   id: 1,
-#   second_name: 'Иванов',
-#   first_name: 'Павел',
-#   patronymic: 'Иванович',
-#   birthdate: '1999-05-06',
-#   phone_number: '89761235689',
-#   email: 'pivanov@example.com',
-#   telegram: 'pivanov',
-#   git: 'https://github.com/pivanov'
-# )
+student1 = Student.new(
+  id: 1,
+  second_name: 'Иванов',
+  first_name: 'Павел',
+  patronymic: 'Иванович',
+  birthdate: '1999-05-06',
+  phone_number: '89761235689',
+  email: 'pivanov@example.com',
+  telegram: 'pivanov',
+  git: 'https://github.com/pivanov'
+)
 
-# student2 = Student.new(
-#   id: 2,
-#   second_name: 'Петров',
-#   first_name: 'Геогрий',
-#   patronymic: 'Петрович',
-#   birthdate: '1997-10-07',
-#   phone_number: '89652138754',
-#   email: 'geopetr@example.com',
-#   telegram: 'geopetr',
-#   git: 'https://github.com/geopetr'
-# )
+student2 = Student.new(
+  id: 2,
+  second_name: 'Петров',
+  first_name: 'Геогрий',
+  patronymic: 'Петрович',
+  birthdate: '1997-10-07',
+  phone_number: '89652138754',
+  email: 'geopetr@example.com',
+  telegram: 'geopetr',
+  git: 'https://github.com/geopetr'
+)
 
 # student3 = Student.new(
 #   second_name: 'Смирнова',
@@ -93,18 +93,32 @@ require 'yaml'
 #   puts "Ошибка: #{e.message}"
 # end
 
+# repeat_student = Student.new(
+#   id: 1,
+#   second_name: 'Иванов',
+#   first_name: 'Иван',
+#   patronymic: 'Иванович',
+#   birthdate: '2000-01-01',
+#   phone_number: '89012345678',
+#   email: 'ivanov@example.com',
+#   telegram: 'ivan_telegram',
+#   git: 'https://github.com/ivan'
+# )
+# db_config = DBConfig.instance
+
+# con = StudentsListDB.new(db_config)
+# con.add_student(repeat_student) # => error
+
 repeat_student = Student.new(
   id: 1,
   second_name: 'Иванов',
-  first_name: 'Иван',
+  first_name: 'Павел',
   patronymic: 'Иванович',
-  birthdate: '2000-01-01',
-  phone_number: '89012345678',
-  email: 'ivanov@example.com',
-  telegram: 'ivan_telegram',
-  git: 'https://github.com/ivan'
+  birthdate: '1999-05-06',
+  phone_number: '89761235689',
+  email: 'pivanov@example.com',
+  telegram: 'pivanov',
+  git: 'https://github.com/pivanov'
 )
-db_config = DBConfig.instance
 
-con = StudentsListDB.new(db_config)
-con.add_student(repeat_student) # => error
+puts student1 == repeat_student # => true
