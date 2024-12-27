@@ -102,5 +102,32 @@ log_message = LogMessage.new("ERROR", "Невозможно подключить
 
 adapter.log_message(log_message)
 
+class OldPayment
+	def make_payment(amount)
+		puts "Оплачено #{amount}"
+	end
+end
+
+class NewPayment
+	def make_payment(amout)
+		puts "Оплачено #{amount}"
+	end
+end
+
+class PaymentAdapter
+	def initialize(payment_system)
+		payment_system = payment_system
+	end
+
+	def make_payment(amount)
+		payment_system.make_payment(amount)
+	end
+end
 
 
+old_system =  OldPayment.new
+old_system.make_payment(500)
+
+new_system = NewPayment.new
+adapter = PaymentAdapter.new(new_system)
+adapter.make_payment(200)
