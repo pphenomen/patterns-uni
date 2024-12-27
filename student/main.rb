@@ -122,3 +122,19 @@ repeat_student = Student.new(
 )
 
 puts student1 == repeat_student # => true
+
+# прочитать из json в yaml
+filepath1 = 'data/students.json'
+strategy1 = JSONFileStrategy.new
+
+students_list = StudentsList.new(filepath: filepath1, strategy: strategy1)
+students_list.read
+
+filepath2 = 'data/students.yaml'
+strategy2 = YAMLFileStrategy.new
+
+students_list_yaml = StudentsList.new(filepath: filepath2, strategy: strategy2)
+students_list_yaml.students = students_list.students
+students_list_yaml.write
+
+puts "Студенты записаны в YAML: #{filepath2}"
