@@ -1,19 +1,523 @@
 ---
-- :id: 1
+- :id:
   :second_name: Иванов
-  :first_name: Павел
+  :first_name: Иван
   :patronymic: Иванович
-  :git: https://github.com/pivanov
-  :birthdate: 1999-05-06
-  :phone_number: '89761235689'
-  :email: pivanov@example.com
-  :telegram: pivanov
-- :id: 2
+  :git: https://github.com/ivan1
+  :birthdate: 1990-01-15
+  :phone_number: '89991234501'
+  :email: ivanov1@mail.ru
+  :telegram: "@ivan1"
+- :id:
   :second_name: Петров
-  :first_name: Геогрий
+  :first_name: Петр
   :patronymic: Петрович
-  :git: https://github.com/geopetr
-  :birthdate: 1997-10-07
-  :phone_number: '89652138754'
-  :email: geopetr@example.com
-  :telegram: geopetr
+  :git: https://github.com/petrov2
+  :birthdate: 1992-04-20
+  :phone_number: '89991234502'
+  :email: petrov2@mail.ru
+  :telegram: "@petrov2"
+- :id:
+  :second_name: Сидоров
+  :first_name: Сидор
+  :patronymic: Сидорович
+  :git:
+  :birthdate: 1993-07-10
+  :phone_number:
+  :email:
+  :telegram:
+- :id:
+  :second_name: Кузнецов
+  :first_name: Кузьма
+  :patronymic: Алексеевич
+  :git: https://github.com/kuznetsov3
+  :birthdate: 1994-03-25
+  :phone_number: '89991234503'
+  :email:
+  :telegram: "@kuznetsov3"
+- :id:
+  :second_name: Васильев
+  :first_name: Василий
+  :patronymic: Васильевич
+  :git:
+  :birthdate: 1995-10-05
+  :phone_number:
+  :email: vasiliev4@mail.ru
+  :telegram:
+- :id:
+  :second_name: Морозов
+  :first_name: Алексей
+  :patronymic: Дмитриевич
+  :git: https://github.com/morozov5
+  :birthdate: 1996-06-12
+  :phone_number: '89991234505'
+  :email: morozov5@mail.ru
+  :telegram:
+- :id:
+  :second_name: Николаев
+  :first_name: Николай
+  :patronymic: Ильич
+  :git:
+  :birthdate: 1997-02-17
+  :phone_number:
+  :email:
+  :telegram:
+- :id:
+  :second_name: Ковалев
+  :first_name: Олег
+  :patronymic: Сергеевич
+  :git: https://github.com/kovalev6
+  :birthdate: 1998-11-30
+  :phone_number: '89991234506'
+  :email:
+  :telegram: "@kovalev6"
+- :id:
+  :second_name: Федоров
+  :first_name: Федор
+  :patronymic: Андреевич
+  :git: https://github.com/fedor7
+  :birthdate: 1999-08-22
+  :phone_number:
+  :email: fedor7@mail.ru
+  :telegram:
+- :id:
+  :second_name: Егоров
+  :first_name: Егор
+  :patronymic: Геннадьевич
+  :git:
+  :birthdate: 2000-05-15
+  :phone_number: '89991234508'
+  :email:
+  :telegram: "@egor8"
+- :id:
+  :second_name: Шестаков
+  :first_name: Степан
+  :patronymic: Иванович
+  :git: https://github.com/shestakov9
+  :birthdate: 2001-03-10
+  :phone_number: '89991234509'
+  :email: shestakov9@mail.ru
+  :telegram: "@shestakov9"
+- :id:
+  :second_name: Семенов
+  :first_name: Семен
+  :patronymic: Алексеевич
+  :git: https://github.com/semen10
+  :birthdate: 2002-09-18
+  :phone_number: '89991234510'
+  :email: semen10@mail.ru
+  :telegram: "@semen10"
+- :id:
+  :second_name: Кузьмин
+  :first_name: Дмитрий
+  :patronymic: Олегович
+  :git:
+  :birthdate: 2003-12-25
+  :phone_number:
+  :email: kuzmin11@mail.ru
+  :telegram:
+- :id:
+  :second_name: Алексеев
+  :first_name: Александр
+  :patronymic: Игоревич
+  :git: https://github.com/alexeev12
+  :birthdate: 1991-06-07
+  :phone_number: '89991234512'
+  :email: alexeev12@mail.ru
+  :telegram: "@alexeev12"
+- :id:
+  :second_name: Горбунов
+  :first_name: Григорий
+  :patronymic: Евгеньевич
+  :git:
+  :birthdate: 1992-04-14
+  :phone_number: '89991234513'
+  :email:
+  :telegram:
+- :id:
+  :second_name: Савин
+  :first_name: Владимир
+  :patronymic: Константинович
+  :git: https://github.com/savin14
+  :birthdate: 1993-01-23
+  :phone_number: '89991234514'
+  :email: savin14@mail.ru
+  :telegram: "@savin14"
+- :id:
+  :second_name: Смирнов
+  :first_name: Сергей
+  :patronymic: Сергеевич
+  :git: https://github.com/smirnov15
+  :birthdate: 1994-11-09
+  :phone_number: '89991234515'
+  :email:
+  :telegram:
+- :id:
+  :second_name: Павлов
+  :first_name: Максим
+  :patronymic: Максимович
+  :git:
+  :birthdate: 1995-10-20
+  :phone_number: '89991234516'
+  :email: pavlov16@mail.ru
+  :telegram:
+- :id:
+  :second_name: Попов
+  :first_name: Игорь
+  :patronymic: Иванович
+  :git: https://github.com/popov17
+  :birthdate: 1996-09-12
+  :phone_number:
+  :email: popov17@mail.ru
+  :telegram: "@popov17"
+- :id:
+  :second_name: Виноградов
+  :first_name: Антон
+  :patronymic: Александрович
+  :git:
+  :birthdate: 1997-07-30
+  :phone_number: '89991234518'
+  :email:
+  :telegram: "@vinogradov18"
+- :id:
+  :second_name: Романов
+  :first_name: Виталий
+  :patronymic: Николаевич
+  :git: https://github.com/romanov19
+  :birthdate: 1998-03-05
+  :phone_number: '89991234519'
+  :email: romanov19@mail.ru
+  :telegram:
+- :id:
+  :second_name: Королев
+  :first_name: Денис
+  :patronymic: Денисович
+  :git: https://github.com/korolev20
+  :birthdate: 1999-11-11
+  :phone_number:
+  :email:
+  :telegram: "@korolev20"
+- :id:
+  :second_name: Мартынов
+  :first_name: Юрий
+  :patronymic: Федорович
+  :git:
+  :birthdate: 2000-02-17
+  :phone_number: '89991234521'
+  :email: martynov21@mail.ru
+  :telegram:
+- :id:
+  :second_name: Орлов
+  :first_name: Михаил
+  :patronymic: Алексеевич
+  :git: https://github.com/orlov22
+  :birthdate: 2001-04-29
+  :phone_number: '89991234522'
+  :email: orlov22@mail.ru
+  :telegram: "@orlov22"
+- :id:
+  :second_name: Соболев
+  :first_name: Артем
+  :patronymic: Георгиевич
+  :git: https://github.com/sobolev23
+  :birthdate: 2002-07-19
+  :phone_number: '89991234523'
+  :email:
+  :telegram: "@sobolev23"
+- :id:
+  :second_name: Тарасов
+  :first_name: Валентин
+  :patronymic: Иванович
+  :git:
+  :birthdate: 2003-03-16
+  :phone_number:
+  :email: tarasov24@mail.ru
+  :telegram: "@tarasov24"
+- :id:
+  :second_name: Жуков
+  :first_name: Алексей
+  :patronymic: Сергеевич
+  :git: https://github.com/zhukov25
+  :birthdate: 1990-06-21
+  :phone_number: '89991234525'
+  :email: zhukov25@mail.ru
+  :telegram:
+- :id:
+  :second_name: Лебедев
+  :first_name: Владислав
+  :patronymic: Игоревич
+  :git: https://github.com/lebedev26
+  :birthdate: 1992-12-01
+  :phone_number: '89991234526'
+  :email:
+  :telegram: "@lebedev26"
+- :id:
+  :second_name: Филиппов
+  :first_name: Олег
+  :patronymic: Григорьевич
+  :git: https://github.com/filippov27
+  :birthdate: 1993-08-18
+  :phone_number:
+  :email: filippov27@mail.ru
+  :telegram:
+- :id:
+  :second_name: Соловьев
+  :first_name: Данила
+  :patronymic: Евгеньевич
+  :git:
+  :birthdate: 1994-05-09
+  :phone_number: '89991234528'
+  :email: soloviev28@mail.ru
+  :telegram: "@soloviev28"
+- :id:
+  :second_name: Пономарев
+  :first_name: Евгений
+  :patronymic: Викторович
+  :git: https://github.com/ponomarev29
+  :birthdate: 1995-01-13
+  :phone_number:
+  :email: ponomarev29@mail.ru
+  :telegram:
+- :id:
+  :second_name: Воронцов
+  :first_name: Андрей
+  :patronymic: Дмитриевич
+  :git: https://github.com/vorontsov30
+  :birthdate: 1996-10-23
+  :phone_number: '89991234530'
+  :email:
+  :telegram: "@vorontsov30"
+- :id:
+  :second_name: Михайлов
+  :first_name: Александр
+  :patronymic: Геннадьевич
+  :git:
+  :birthdate: 1997-02-15
+  :phone_number: '89991234531'
+  :email: mikhailov31@mail.ru
+  :telegram:
+- :id:
+  :second_name: Карпов
+  :first_name: Дмитрий
+  :patronymic: Сергеевич
+  :git: https://github.com/karpov32
+  :birthdate: 1998-11-03
+  :phone_number:
+  :email: karpov32@mail.ru
+  :telegram: "@karpov32"
+- :id:
+  :second_name: Титов
+  :first_name: Константин
+  :patronymic: Анатольевич
+  :git:
+  :birthdate: 1999-06-22
+  :phone_number: '89991234533'
+  :email: titov33@mail.ru
+  :telegram:
+- :id:
+  :second_name: Гусев
+  :first_name: Олег
+  :patronymic: Владимирович
+  :git: https://github.com/gusev34
+  :birthdate: 2000-04-17
+  :phone_number: '89991234534'
+  :email: gusev34@mail.ru
+  :telegram: "@gusev34"
+- :id:
+  :second_name: Киселев
+  :first_name: Юрий
+  :patronymic: Аркадьевич
+  :git:
+  :birthdate: 2001-08-29
+  :phone_number:
+  :email: kiselev35@mail.ru
+  :telegram: "@kiselev35"
+- :id:
+  :second_name: Зайцев
+  :first_name: Иван
+  :patronymic: Иванович
+  :git: https://github.com/zaytsev36
+  :birthdate: 2002-03-27
+  :phone_number: '89991234536'
+  :email: zaytsev36@mail.ru
+  :telegram: "@zaytsev36"
+- :id:
+  :second_name: Григорьев
+  :first_name: Петр
+  :patronymic: Николаевич
+  :git:
+  :birthdate: 2003-10-15
+  :phone_number:
+  :email:
+  :telegram:
+- :id:
+  :second_name: Ершов
+  :first_name: Владимир
+  :patronymic: Семенович
+  :git: https://github.com/ershov38
+  :birthdate: 1990-02-25
+  :phone_number: '89991234538'
+  :email: ershov38@mail.ru
+  :telegram: "@ershov38"
+- :id:
+  :second_name: Мельников
+  :first_name: Сергей
+  :patronymic: Дмитриевич
+  :git:
+  :birthdate: 1991-12-12
+  :phone_number:
+  :email: melnikov39@mail.ru
+  :telegram:
+- :id:
+  :second_name: Ефимов
+  :first_name: Алексей
+  :patronymic: Иванович
+  :git: https://github.com/efimov40
+  :birthdate: 1992-07-09
+  :phone_number: '89991234540'
+  :email: efimov40@mail.ru
+  :telegram: "@efimov40"
+- :id:
+  :second_name: Исаев
+  :first_name: Николай
+  :patronymic: Федорович
+  :git:
+  :birthdate: 1993-01-18
+  :phone_number: '89991234541'
+  :email:
+  :telegram: "@isaev41"
+- :id:
+  :second_name: Беляев
+  :first_name: Максим
+  :patronymic: Олегович
+  :git: https://github.com/belyaev42
+  :birthdate: 1994-03-24
+  :phone_number: '89991234542'
+  :email:
+  :telegram: "@belyaev42"
+- :id:
+  :second_name: Третьяков
+  :first_name: Юрий
+  :patronymic: Геннадьевич
+  :git:
+  :birthdate: 1995-09-30
+  :phone_number: '89991234543'
+  :email: tretyakov43@mail.ru
+  :telegram:
+- :id:
+  :second_name: Игнатов
+  :first_name: Артем
+  :patronymic: Викторович
+  :git: https://github.com/ignatov44
+  :birthdate: 1996-04-07
+  :phone_number: '89991234544'
+  :email: ignatov44@mail.ru
+  :telegram: "@ignatov44"
+- :id:
+  :second_name: Головин
+  :first_name: Данил
+  :patronymic: Алексеевич
+  :git:
+  :birthdate: 1997-06-19
+  :phone_number: '89991234545'
+  :email: golovin45@mail.ru
+  :telegram:
+- :id:
+  :second_name: Кудрявцев
+  :first_name: Евгений
+  :patronymic: Евгеньевич
+  :git: https://github.com/kudryavtsev46
+  :birthdate: 1998-01-29
+  :phone_number:
+  :email: kudryavtsev46@mail.ru
+  :telegram: "@kudryavtsev46"
+- :id:
+  :second_name: Быков
+  :first_name: Дмитрий
+  :patronymic: Александрович
+  :git:
+  :birthdate: 1999-03-21
+  :phone_number:
+  :email: bykov47@mail.ru
+  :telegram: "@bykov47"
+- :id:
+  :second_name: Суханов
+  :first_name: Олег
+  :patronymic: Иванович
+  :git: https://github.com/sukhanov48
+  :birthdate: 2000-08-17
+  :phone_number: '89991234548'
+  :email:
+  :telegram: "@sukhanov48"
+- :id:
+  :second_name: Рыбаков
+  :first_name: Никита
+  :patronymic: Петрович
+  :git: https://github.com/rybakov49
+  :birthdate: 2001-02-04
+  :phone_number: '89991234549'
+  :email: rybakov49@mail.ru
+  :telegram:
+- :id:
+  :second_name: Крюков
+  :first_name: Андрей
+  :patronymic: Николаевич
+  :git: https://github.com/kryukov50
+  :birthdate: 2002-12-20
+  :phone_number:
+  :email:
+  :telegram: "@kryukov50"
+- :id:
+  :second_name: Сорокин
+  :first_name: Александр
+  :patronymic: Владимирович
+  :git:
+  :birthdate: 2003-05-30
+  :phone_number:
+  :email: sorokin51@mail.ru
+  :telegram:
+- :id:
+  :second_name: Чернов
+  :first_name: Игорь
+  :patronymic: Сергеевич
+  :git: https://github.com/chernov52
+  :birthdate: 1990-11-11
+  :phone_number: '89991234552'
+  :email: chernov52@mail.ru
+  :telegram: "@chernov52"
+- :id:
+  :second_name: Громов
+  :first_name: Виталий
+  :patronymic: Геннадьевич
+  :git:
+  :birthdate: 1991-10-01
+  :phone_number: '89991234553'
+  :email: gromov53@mail.ru
+  :telegram:
+- :id:
+  :second_name: Тимофеев
+  :first_name: Антон
+  :patronymic: Иванович
+  :git: https://github.com/timofeev54
+  :birthdate: 1992-07-22
+  :phone_number:
+  :email: timofeev54@mail.ru
+  :telegram: "@timofeev54"
+- :id:
+  :second_name: Копылов
+  :first_name: Иван
+  :patronymic: Анатольевич
+  :git:
+  :birthdate: 1993-12-25
+  :phone_number: '89991234555'
+  :email:
+  :telegram: "@kopilov55"
+- :id:
+  :second_name: Миронов
+  :first_name: Максим
+  :patronymic: Константинович
+  :git: https://github.com/mironov56
+  :birthdate: 1994-06-10
+  :phone_number: '89991234556'
+  :email: mironov56@mail.ru
+  :telegram:
