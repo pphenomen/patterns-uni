@@ -8,7 +8,7 @@ class Student < Person
 
 	PHONE_REGEX = /\A\d{11}\z/
   	EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  	TELEGRAM_REGEX = /\A[a-zA-Z0-9_]{5,32}\z/
+  	TELEGRAM_REGEX = /\A@[a-zA-Z0-9_]{5,32}\z/
   	FULLNAME_REGEX = /\A[А-Яа-яЁёA-Za-z]+\z/
 
 	def initialize(second_name:, first_name:, patronymic:, id: nil,  git: nil, birthdate: nil, phone_number: nil, email: nil, telegram: nil) 
@@ -99,9 +99,9 @@ class Student < Person
 	end
 
 	def contact
-    	return "(номер телефона) #{phone_number}" if phone_number
-    	return "(почта) #{email}" if email
-    	return "(телеграм) #{telegram}" if telegram
+    	return "Телефон: #{phone_number}" if phone_number
+    	return "Почта: #{email}" if email
+    	return "Телеграм: #{telegram}" if telegram
 	end
 
 	def surname_initials

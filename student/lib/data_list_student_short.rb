@@ -2,6 +2,17 @@ require_relative 'data_list'
 require_relative 'data_table'
 
 class DataListStudentShort < DataList
+	attr_accessor :view
+	
+	def set_offset(offset)
+    	@offset = offset
+  	end
+
+	def notify
+	    @view.set_table_params(column_names, self.data.size)
+	    @view.set_table_data(build_table)
+	end
+  	
 	private
 
 	def column_names

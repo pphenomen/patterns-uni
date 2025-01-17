@@ -14,7 +14,9 @@ class DataList
 	end
 
 	def select(number)
-		raise ArgumentError, "Индекс выходит за пределы" unless number.between?(0, data.length - 1)
+		raise ArgumentError, "Индекс выходит за пределы" unless number.between?(0, data.size - 1)
+
+		selected.clear
 		selected << number
 	end
 

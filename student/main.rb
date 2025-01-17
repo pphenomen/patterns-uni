@@ -24,7 +24,7 @@ student1 = Student.new(
   birthdate: '1999-05-06',
   phone_number: '89761235689',
   email: 'pivanov@example.com',
-  telegram: 'pivanov',
+  telegram: '@pivanov',
   git: 'https://github.com/pivanov'
 )
 
@@ -36,7 +36,7 @@ student2 = Student.new(
   birthdate: '1997-10-07',
   phone_number: '89652138754',
   email: 'geopetr@example.com',
-  telegram: 'geopetr',
+  telegram: '@geopetr',
   git: 'https://github.com/geopetr'
 )
 
@@ -117,7 +117,7 @@ repeat_student = Student.new(
   birthdate: '1999-05-06',
   phone_number: '89761235689',
   email: 'pivanov@example.com',
-  telegram: 'pivanov',
+  telegram: '@pivanov',
   git: 'https://github.com/pivanov'
 )
 
