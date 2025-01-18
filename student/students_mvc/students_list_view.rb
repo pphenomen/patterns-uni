@@ -41,20 +41,6 @@ class StudentsListView < FXMainWindow
 	    adjust_column_widths
 	end
 
-	def adjust_column_widths
-	    (0...@table.numColumns).each do |col|
-	        max_width = 0
-
-	        (0...@table.numRows).each do |row|
-	            cell_text = @table.getItemText(row, col)
-	            text_width = cell_text.length * 8
-	            max_width = [max_width, text_width].max
-	        end
-
-	        @table.setColumnWidth(col, max_width)
-	    end
-	end
-
 	def refresh_view
 	    @controller.refresh_data if @controller
 	end
@@ -133,12 +119,26 @@ class StudentsListView < FXMainWindow
     	end
   	end
 
+	def adjust_column_widths
+	    (0...@table.numColumns).each do |col|
+	        max_width = 0
+
+	        (0...@table.numRows).each do |row|
+	            cell_text = @table.getItemText(row, col)
+	            text_width = cell_text.length * 8
+	            max_width = [max_width, text_width].max
+	        end
+
+	        @table.setColumnWidth(col, max_width)
+	    end
+	end
+
   	def create_control_buttons
     	control_frame = FXHorizontalFrame.new(@student_list_view, opts: LAYOUT_FILL_X)
 
-    	FXButton.new(control_frame, "Добавить", opts: BUTTON_NORMAL)
-    	FXButton.new(control_frame, "Изменить", opts: BUTTON_NORMAL)
-    	FXButton.new(control_frame, "Удалить", opts: BUTTON_NORMAL)
-    	FXButton.new(control_frame, "Обновить", opts: BUTTON_NORMAL).connect(SEL_COMMAND) { refresh_view }
+    	@add_button = FXButton.new(control_frame, "Добавить", opts: BUTTON_NORMAL)
+    	@edit_button = FXButton.new(control_frame, "Изменить", opts: BUTTON_NORMAL)
+    	@delete_button = FXButton.new(control_frame, "Удалить", opts: BUTTON_NORMAL)
+    	@update_button = FXButton.new(control_frame, "Обновить", opts: BUTTON_NORMAL).connect(SEL_COMMAND) { refresh_view }
   	end
 end

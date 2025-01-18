@@ -31,6 +31,8 @@ class StudentsListController
 	    @data_list.notify
 	end
 
+	private
+	
 	def collect_filters
 	    {
 	      fio: @view.instance_variable_get(:@fio_field).text.strip,
