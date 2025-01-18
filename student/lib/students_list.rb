@@ -43,12 +43,7 @@ class StudentsList
     selected = self.students[start, n] || []
     students_short = selected.map { |student| StudentShort.from_student(student) }
     data_list ||= DataListStudentShort.new(students_short)
-    data_list.set_offset(start)
     data_list
-  end
-
-  def set_offset(offset)
-    @offset = offset
   end
 
   def sort_by_surname_initials

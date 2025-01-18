@@ -5,14 +5,13 @@ require_relative '../lib/data_list'
 include Fox
 
 class StudentsListView < FXMainWindow
-	attr_accessor :controller, :data_list
-	attr_reader :students_per_page, :current_page
+	attr_accessor :students_per_page, :current_page, :controller
 
   	def initialize(app, controller: nil)
 	    super(app, "Список студентов", width: 1024, height: 768)
 	    @students_per_page = 20
 	    @current_page = 1
-		@controller = controller
+		@controller = StudentsListController.new(self)
 
     	create_main_layout
     	create_filter_section
@@ -24,6 +23,8 @@ class StudentsListView < FXMainWindow
   	end
 
   	def set_table_params(column_names, whole_entities_count)
+  		return unless @table
+
 	    @table.setTableSize(0, column_names.size)
 	  	column_names.each_with_index { |name, index| @table.setColumnText(index, name) }
 
@@ -32,6 +33,8 @@ class StudentsListView < FXMainWindow
 	end
 
 	def set_table_data(data_table)
+		return unless @table && !data_table.nil? && !data_table.empty?
+
 	    @table.setTableSize(data_table.size, data_table.first.size)
 	    data_table.each_with_index do |row, i|
 	    	row.each_with_index do |value, j|
@@ -87,37 +90,33 @@ class StudentsListView < FXMainWindow
     	table_frame = FXGroupBox.new(@student_list_view, "Список студентов", opts: GROUPBOX_NORMAL | LAYOUT_FILL)
 	    @table = FXTable.new(table_frame, opts: LAYOUT_FILL)
 	    @table.setTableSize(0, 4)
-
-	    @table.connect(SEL_CHANGED) do |_, _, event|
-	        if event.row >= 0
-        		@data_list.select(event.row)
-	        end
-	    end
-
 	    @table.editable = false
   	end
 
   	def create_pagination_controls
 	    pagination_frame = FXHorizontalFrame.new(@student_list_view, opts: LAYOUT_FILL_X)
-	    @page_label = FXLabel.new(pagination_frame, "Страница 1 из 1", opts: LAYOUT_CENTER_X)
+	    @page_label = FXLabel.new(pagination_frame, "Страница #{@current_page} из #{@total_pages}", opts: LAYOUT_CENTER_X)
 
 	    @prev_button = FXButton.new(pagination_frame, "Назад", nil, nil, 0, opts: BUTTON_NORMAL)
     	@next_button = FXButton.new(pagination_frame, "Вперед", nil, nil, 0, opts: BUTTON_NORMAL)
 
-    	@prev_button.connect(SEL_COMMAND) do
-	      	if @current_page > 1
-	        	@current_page -= 1
-	        	refresh_view
-	      	end
-	    end
-
-    	@next_button.connect(SEL_COMMAND) do
-      		if @current_page < @total_pages
-        		@current_page += 1
-        		refresh_view
-      		end
-    	end
+    	@prev_button.connect(SEL_COMMAND) { go_to_the_prev_page }
+    	@next_button.connect(SEL_COMMAND) { go_to_the_next_page }
   	end
+
+  	def go_to_the_next_page
+  		if @current_page < @total_pages
+  			@current_page += 1
+			refresh_view
+	    end
+	end
+
+	def go_to_the_prev_page
+  		if @current_page > 1
+  			@current_page -= 1
+	        refresh_view
+	    end
+	end
 
 	def adjust_column_widths
 	    (0...@table.numColumns).each do |col|

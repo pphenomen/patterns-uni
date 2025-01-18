@@ -1,8 +1,7 @@
 class DataList
-	private attr_reader :data, :column_names
-	private attr_accessor :selected
+	private attr_reader :data, :column_names, :selected
 
-	def initialize(data, column_names = [])
+	def initialize(data)
 		self.data = data
 		self.column_names = column_names
 		@selected = []
