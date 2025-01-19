@@ -103,6 +103,15 @@ class StudentsListView < FXMainWindow
     	@prev_button.connect(SEL_COMMAND) { go_to_the_prev_page }
     	@next_button.connect(SEL_COMMAND) { go_to_the_next_page }
   	end
+  	
+  	def create_control_buttons
+    	control_frame = FXHorizontalFrame.new(@student_list_view, opts: LAYOUT_FILL_X)
+
+    	@add_button = FXButton.new(control_frame, "Добавить", opts: BUTTON_NORMAL)
+    	@edit_button = FXButton.new(control_frame, "Изменить", opts: BUTTON_NORMAL)
+    	@delete_button = FXButton.new(control_frame, "Удалить", opts: BUTTON_NORMAL)
+    	@update_button = FXButton.new(control_frame, "Обновить", opts: BUTTON_NORMAL).connect(SEL_COMMAND) { refresh_view }
+  	end
 
   	def go_to_the_next_page
   		if @current_page < @total_pages
@@ -131,13 +140,4 @@ class StudentsListView < FXMainWindow
 	        @table.setColumnWidth(col, max_width)
 	    end
 	end
-
-  	def create_control_buttons
-    	control_frame = FXHorizontalFrame.new(@student_list_view, opts: LAYOUT_FILL_X)
-
-    	@add_button = FXButton.new(control_frame, "Добавить", opts: BUTTON_NORMAL)
-    	@edit_button = FXButton.new(control_frame, "Изменить", opts: BUTTON_NORMAL)
-    	@delete_button = FXButton.new(control_frame, "Удалить", opts: BUTTON_NORMAL)
-    	@update_button = FXButton.new(control_frame, "Обновить", opts: BUTTON_NORMAL).connect(SEL_COMMAND) { refresh_view }
-  	end
 end

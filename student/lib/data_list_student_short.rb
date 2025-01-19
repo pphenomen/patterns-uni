@@ -20,7 +20,7 @@ class DataListStudentShort < DataList
     def notify
         @observers.each do |observer|
           observer.set_table_params(column_names, @count)
-          observer.set_table_data(get_data)
+          observer.set_table_data(get_objects_array)
         end
     end
   	
