@@ -22,6 +22,7 @@ class StudentsList
   end
 
   def read
+    raise ArgumentError, "Файл #{@filepath} не найден!" unless File.exist?(@filepath)
     self.students = @strategy.read(@filepath)
   end
 
@@ -36,7 +37,7 @@ class StudentsList
   end
 
   def get_k_n_student_short_list(k, n, data_list = nil)
-    if k <= 0 || n <= 0 || !k.is_a?(Integer) || !n.is_a?(Integer)
+    if !k.is_a?(Integer) || !n.is_a?(Integer) || !k.positive? || !n.positive?
       raise ArgumentError, "Числа должны быть целыми и положительными"
     end
     start = (k - 1) * n

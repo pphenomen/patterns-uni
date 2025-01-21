@@ -1,9 +1,9 @@
 class DataList
-	private attr_reader :data, :column_names, :selected
+	attr_reader :data, :selected, :column_names
 
 	def initialize(data)
 		self.data = data
-		self.column_names = column_names
+		@column_names = column_names
 		@selected = []
 	end
 
@@ -34,18 +34,13 @@ class DataList
 	def get_data
 		get_objects_array
 	end
-	
-	private
 
 	def data=(data)
 		raise ArgumentError, "Объект должен являться массивом" unless data.is_a?(Array)
 		@data = data
 	end
 
-	def column_names=(names)
-    	raise ArgumentError, "Наименования столбцов не могут быть изменены" unless @column_names.nil?
-    	@column_names = names
-  	end
+	private
 
 	def column_names
 		raise NotImplementedError, "Метод не реализован в классе"

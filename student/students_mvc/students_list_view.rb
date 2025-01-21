@@ -20,6 +20,8 @@ class StudentsListView < FXMainWindow
     	create_control_buttons
 
     	show(PLACEMENT_SCREEN)
+
+    	@controller.refresh_data
   	end
 
   	def set_table_params(column_names, whole_entities_count)
@@ -100,8 +102,8 @@ class StudentsListView < FXMainWindow
 	    @prev_button = FXButton.new(pagination_frame, "Назад", nil, nil, 0, opts: BUTTON_NORMAL)
     	@next_button = FXButton.new(pagination_frame, "Вперед", nil, nil, 0, opts: BUTTON_NORMAL)
 
-    	@prev_button.connect(SEL_COMMAND) { go_to_the_prev_page }
-    	@next_button.connect(SEL_COMMAND) { go_to_the_next_page }
+    	@prev_button.connect(SEL_COMMAND) { change_page(-1) }
+    	@next_button.connect(SEL_COMMAND) { change_page(1) }
   	end
   	
   	def create_control_buttons
@@ -113,19 +115,9 @@ class StudentsListView < FXMainWindow
     	@update_button = FXButton.new(control_frame, "Обновить", opts: BUTTON_NORMAL).connect(SEL_COMMAND) { refresh_view }
   	end
 
-  	def go_to_the_next_page
-  		if @current_page < @total_pages
-  			@current_page += 1
-			refresh_view
-	    end
-	end
-
-	def go_to_the_prev_page
-  		if @current_page > 1
-  			@current_page -= 1
-	        refresh_view
-	    end
-	end
+	def change_page(page)
+    	@controller.change_page(page)
+  	end
 
 	def adjust_column_widths
 	    (0...@table.numColumns).each do |col|
