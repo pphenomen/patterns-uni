@@ -2,10 +2,11 @@ require_relative 'data_list'
 require_relative 'data_table'
 
 class DataListStudentShort < DataList
-	attr_accessor :count
+	attr_accessor :count, :offset
 
-	def initialize(data)
+	def initialize(data, offset = 0)
 		super(data)
+		@offset = offset
 		@observers = []
 	end
 
@@ -33,7 +34,7 @@ class DataListStudentShort < DataList
 	def get_objects_array
 		raise ArgumentError, "Данные отсутствуют" if data.empty?
 		data.map.with_index(1) do |object, index|
-			[index, object.surname_initials, object.git, object.contact]
+			[index + @offset, object.surname_initials, object.git, object.contact]
 		end
 	end
 end

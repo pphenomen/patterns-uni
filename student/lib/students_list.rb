@@ -42,7 +42,7 @@ class StudentsList
     start = (k - 1) * n
     selected = self.students[start, n] || []
     students_short = selected.map { |student| StudentShort.from_student(student) }
-    data_list ||= DataListStudentShort.new(students_short)
+    data_list ||= DataListStudentShort.new(students_short, start)
     data_list
   end
 
