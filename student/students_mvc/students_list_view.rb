@@ -25,8 +25,6 @@ class StudentsListView < FXMainWindow
   	end
 
   	def set_table_params(column_names, whole_entities_count)
-  		return unless @table
-
 	    @table.setTableSize(0, column_names.size)
 	  	column_names.each_with_index { |name, index| @table.setColumnText(index, name) }
 
@@ -35,8 +33,6 @@ class StudentsListView < FXMainWindow
 	end
 
 	def set_table_data(data_table)
-		return unless @table && !data_table.nil? && !data_table.empty?
-
 	    @table.setTableSize(data_table.size, data_table.first.size)
 	    data_table.each_with_index do |row, i|
 	    	row.each_with_index do |value, j|
